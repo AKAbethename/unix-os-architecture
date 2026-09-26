@@ -5,7 +5,7 @@
 **Пункт 4.** Зафиксируйте приглашение к вводу имени пользователя и расшифруйте его
 составляющие:
 
-![Приглашение ввести логин](pictures/enterlogin.png)
+![Приглашение ввести логин](pictures/lab1-5/enterlogin.png)
 
 Приглашение составляет следующие строки:
 
@@ -25,7 +25,7 @@ arkady-unix login:
 
 Точное имя учетной записи автор запамятовал, поэтому был введен логин суперпользователя: root, и пароль суперпользователя, после чего терминал выдал приглашение на ввод от имена суперпользователя:
 
-![](pictures/enterroot.png)
+![](pictures/lab1-5/enterroot.png)
 
 После ввода пароля также вывелось сообщение MOTD:
 
@@ -58,7 +58,7 @@ root@arkady-unix:~#
 
 Ниже приведен один из способов узнать логин другого пользователя и переключиться на него:
 
-![](pictures/enterstudent.png)
+![](pictures/lab1-5/enterstudent.png)
 
 При создании учетной записи система автоматически создает в директории /home директорию, названную именем учетной записи. Итак, при вводе команды
 
@@ -91,15 +91,15 @@ arkady-student@arkady-unix:~$
 
 При нажатии на комбинацию Alt + -> или Alt + <- происходит переключение между терминалами tty
 
-![](pictures/turn-another-tty.png)
+![](pictures/lab1-5/turn-another-tty.png)
 
 Сделан вход в терминалы 2, 4 и 6:
 
-![](pictures/tty4-open.png)
+![](pictures/lab1-5/tty4-open.png)
 
-![](pictures/tty5-closed.png)
+![](pictures/lab1-5/tty5-closed.png)
 
-![](pictures/tty6-open.png)
+![](pictures/lab1-5/tty6-open.png)
 
 Чтобы просмотреть, к какому терминалу подключена командная оболочка, нужно выполнить команду
 
@@ -107,7 +107,7 @@ arkady-student@arkady-unix:~$
 tty
 ```
 
-![](pictures/tty-command.png)
+![](pictures/lab1-5/tty-command.png)
 
 
 При помощи команды 
@@ -117,9 +117,9 @@ clear
 ```
 очищен терминал tty1
 
-![](pictures/clear-tty1.png)
+![](pictures/lab1-5/clear-tty1.png)
 
-![](pictures/clear-tty1-2.png)
+![](pictures/lab1-5/clear-tty1-2.png)
 
 
 
@@ -133,9 +133,9 @@ exit
 
 произведен выход из терминалов
 
-![](pictures/exit-from-tty.png)
+![](pictures/lab1-5/exit-from-tty.png)
 
-![](pictures/exit-from-tty6-2.png)
+![](pictures/lab1-5/exit-from-tty6-2.png)
 
 
 
@@ -163,7 +163,7 @@ exit
 Команда cal не установлена в систему, ее необходимо установить самостоятельно:
 
 
-![](pictures/cal-install.png)
+![](pictures/lab1-5/cal-install.png)
 
 При помощи команды
 
@@ -174,13 +174,13 @@ uname
 не выводится версия операционной системы. Использовав команду man и далее флаг -r, можно получить необходимую информацию:
 
 
-![](pictures/uname-r.png)
+![](pictures/lab1-5/uname-r.png)
 
 
 Ниже приведен вывод всех перечисленных выше команд:
 
 
-![](pictures/bash-commands-2.png)
+![](pictures/lab1-5/bash-commands-2.png)
 
 
 ## Упражнение 1.5.
@@ -200,23 +200,23 @@ uname
 **Вывод:** данные клавиши и команда `history` позволяют быстрее работать с командной строкой, редактировать введённые команды и просматривать историю предыдущих действий.
 
 
-![](pictures/history.png)
+![](pictures/lab1-5/history.png)
 
 ## Упражнение 1.6.
 
 Ниже применение команды passwd для изменения пароля учетной записи:
 
-![](pictures/passwd.png)
+![](pictures/lab1-5/passwd.png)
 
-![](pictures/chfn.png)
+![](pictures/lab1-5/chfn.png)
 
 Для выполнения команды finger необходимо установить ее. Изначально sudo не установлен, эту и другие команды можно устанавливать через суперпользователя root, после чего использовать команду finger
 
-![](pictures/sudo-finger.png)
+![](pictures/lab1-5/sudo-finger.png)
 
 Команда chsh позволяет изменить оболочку интерпертатора
 
-![](pictures/chsh.png)
+![](pictures/lab1-5/chsh.png)
 
 
 ## Упражнение 1.7.
@@ -239,7 +239,7 @@ id
 exit
 ```
 
-![](pictures/1-7point.png)
+![](pictures/lab1-5/1-7point.png)
 
 ## Упражнение 1.8.
 
@@ -247,11 +247,11 @@ exit
 
 Команда write не найдена в системе. Установить ее также проблематично. Можно сымитировать использование команды write путем создания группы пользователей. Для этого необходимо переключиться на пользователя root и создать группу из пользователей arkady-student и aka:
 
-![](pictures/group-add-1.png)
+![](pictures/lab1-5/group-add-1.png)
 
 В другом терминале, в котором запущен другой пользователь, при помощи команды cat выведется следующее:
 
-![](pictures/group-add-2.png)
+![](pictures/lab1-5/group-add-2.png)
 
 Итак, была создана группа **family**, в которую были добавлены пользователи *arkady-student* и *aka*. Был создан общий файл **/tmp/chat** для данной группы, и пользователи могут обмениваться сообщениями через команды **echo** и **cat** соответственно.
 
@@ -265,14 +265,14 @@ echo "Hi, aka!" > /dev/tty4
 
 соответствующее сообщение выведется в терминале tty4, в котором и находится пользователь-адресат **aka**.
 
-![alt text](pictures/arkady-aka.png)
+![alt text](pictures/lab1-5/arkady-aka.png)
 
 
-![alt text](pictures/aka-get.png)
+![alt text](pictures/lab1-5/aka-get.png)
 
 Настройка ниже:
 
-![alt text](pictures/rootset.png)
+![alt text](pictures/lab1-5/rootset.png)
 
 Команда
 
@@ -284,11 +284,11 @@ Ctrl+D
 
 Отправляет сообщение всем активным пользователям в другие терминалы
 
-![](pictures/welcome-1.png)
+![](pictures/lab1-5/welcome-1.png)
 
-![](pictures/welcome-2.png)
+![](pictures/lab1-5/welcome-2.png)
 
-![](pictures/welcome-3.png)
+![](pictures/lab1-5/welcome-3.png)
 
 
 # Лабораторная работа 2. Работа со справочными системами
@@ -301,9 +301,9 @@ Ctrl+D
 man man
 ```
 
-![](pictures/man-1.png)
+![](pictures/lab1-5/man-1.png)
 
-![](pictures/man-2.png)
+![](pictures/lab1-5/man-2.png)
 
 
 
@@ -316,7 +316,7 @@ Space — переход на следующую страницу;
 b — переход на предыдущую страницу;
 q — выход из справки.
 
-![](pictures/man-scroll.png)
+![](pictures/lab1-5/man-scroll.png)
 
 Для поиска информации используются:
 
@@ -324,7 +324,7 @@ q — выход из справки.
 /слово
 ```
 
-![](pictures/search-man.png)
+![](pictures/lab1-5/search-man.png)
 
 Поиск вперёд.
 
@@ -354,7 +354,7 @@ N
 /page
 ```
 
-![](pictures/man-page-number.png)
+![](pictures/lab1-5/man-page-number.png)
 
 а для перехода между найденными совпадениями:
 
@@ -372,13 +372,13 @@ whatis
 Производит поиск утилиты и его краткого описания.
 
 
-![](pictures/whatis.png)
+![](pictures/lab1-5/whatis.png)
 
 
 ```bash
 apropos
 ```
-![](pictures/apropos.png)
+![](pictures/lab1-5/apropos.png)
 
 
 
@@ -391,14 +391,14 @@ apropos
 help help
 ```
 
-![](pictures/help.png)
+![](pictures/lab1-5/help.png)
 
 Выход из help:
 
 
-![](pictures/q-help.png)
+![](pictures/lab1-5/q-help.png)
 
-![](pictures/help-cmds.png)
+![](pictures/lab1-5/help-cmds.png)
 
 
 
@@ -406,11 +406,11 @@ help help
 
 По умолчанию команда info не установлена в системе.
 
-![](pictures/install-info.png)
+![](pictures/lab1-5/install-info.png)
 
-![](pictures/info-info.png)
+![](pictures/lab1-5/info-info.png)
 
-![](pictures/info-info-scroll.png)
+![](pictures/lab1-5/info-info-scroll.png)
 
 
 
@@ -422,11 +422,11 @@ help help
 Команда **env** выводит переменные окружения
 
 
-![](pictures/env.png)
+![](pictures/lab1-5/env.png)
 
 Для просмотра определенных переменных используется утилита **grep**.
 
-![](pictures/pathlangterm.png)
+![](pictures/lab1-5/pathlangterm.png)
 
 Переменная PATH выводит путь, где система ищет исполняемые команды;
 
@@ -436,12 +436,12 @@ help help
 
 Далее установлено пустое значение PATH 
 
-![](pictures/path=.png)
+![](pictures/lab1-5/path=.png)
 
 Это приводит к тому, что BASH ищет файлы в каталогах, которые не указаны в PATH. Далее PATH можно восстановить при помощи переключения на другой терминал или команды
 
 
-![](pictures/revivalpath.png)
+![](pictures/lab1-5/revivalpath.png)
 
 Установим переменную LANG на французскую локаль:
 
@@ -449,23 +449,23 @@ help help
 Для установки французской локали необходимо отредактировать файл /etc/locale.gen и сгенерировать их:
 
 
-![](pictures/localegen.png)
+![](pictures/lab1-5/localegen.png)
 
 Локаль действительно поменялась на французскую:
 
 
-![](pictures/kruasan.png)
+![](pictures/lab1-5/kruasan.png)
 
 
-![](pictures/locale-gen-2.png)
+![](pictures/lab1-5/locale-gen-2.png)
 
-![](pictures/langfr.png)
+![](pictures/lab1-5/langfr.png)
 
 Заметно изменился вывод команды **date** при переходе на французскую локаль.
 Отличается так же вывод команды **man** при разных установленных локалях:
 
-![](pictures/lang=ru.png)
-![](pictures/lang=fr.png)
+![](pictures/lab1-5/lang=ru.png)
+![](pictures/lab1-5/lang=fr.png)
 
 Восстановление аналогично восстановлению переменной PATH.
 
@@ -477,30 +477,30 @@ sudo apt install mc
 
 Результаты ниже:
 
-![](pictures/mceditinstall.png)
+![](pictures/lab1-5/mceditinstall.png)
 
-![](pictures/mcedit-linux.png)
+![](pictures/lab1-5/mcedit-linux.png)
 
-![](pictures/mcedit-vt100.png)
+![](pictures/lab1-5/mcedit-vt100.png)
 
 Также наблюдаются различия в работе терминальной программы **man**.
 
 Восстановление переменной TERM аналогично:
 
 
-![](pictures/returnTermLinux.png)
+![](pictures/lab1-5/returnTermLinux.png)
 
 
 При вводе команды **set** выводятся переменные Bash, функции и так далее.
 Чтобы просмотреть значение переменной **PS1**, используется утилита **grep**
 
-![](pictures/set_PS1.png)
+![](pictures/lab1-5/set_PS1.png)
 
 PS1 в отличие от PATH, LANG и TERM — это внутренняя переменная Bash, используемая для формирования приглашения командной строки.
 
 При изменении значения переменной **PS1** меняется приглашение к вводу в терминале:
 
-![](pictures/changePS1.png)
+![](pictures/lab1-5/changePS1.png)
 
 
 
@@ -509,7 +509,7 @@ PS1 в отличие от PATH, LANG и TERM — это внутренняя п
 Требуется создать файл **.plan** в домашней директории. Точка в начале означает, что файл скрытый. Создать файл можно при помощи терминальной программы **mcedit**. Файл был заполнен одной строкой: "I LOVE MKN".
 
 
-![](pictures/create-plan.png)
+![](pictures/lab1-5/create-plan.png)
 
 Файл **.plan** является пользовательским информационным, поэтому при использовании команды **finger arkady-student** будет выведено содержимое файла **.plan** в том числе.
 
@@ -521,18 +521,18 @@ export LANG=en_US.UTF-8
 ```
 
 
-![](pictures/change_bashrc.png)
+![](pictures/lab1-5/change_bashrc.png)
 
-![](pictures/date_man_afterbashrc.png)
+![](pictures/lab1-5/date_man_afterbashrc.png)
 
 При задании переменной **PS1** также видно изменение локали на английскую.
 
-![](pictures/changeLangmcedit.png)
+![](pictures/lab1-5/changeLangmcedit.png)
 
 Переменная **PS1** установлена следующим значением: **asa eli >**. Приглашение в терминале теперь соответствующее:
 
 
-![](pictures/changed_prigl.png)
+![](pictures/lab1-5/changed_prigl.png)
 
 
 # Лабораторная работа 4. Файлы и файловая система UNIX
@@ -543,7 +543,7 @@ export LANG=en_US.UTF-8
 
 Ниже приведен пример использования команд **cd**, **ls**, **pwd**.
 
-![](pictures/cd-pwd-ls.png)
+![](pictures/lab1-5/cd-pwd-ls.png)
 
 
 | Каталог  | Назначение                                                                                                                 |
@@ -577,21 +577,21 @@ export LANG=en_US.UTF-8
 
 Переход в директорию **/etc** и вывод содержимого файла **/etc/fstab**, содержащего конфигурацию файловых систем:
 
-![](pictures/etc-fstab.png)
+![](pictures/lab1-5/etc-fstab.png)
 
 Переход в директорию **/bin/**:
 
-![](pictures/bin-bash.png)
+![](pictures/lab1-5/bin-bash.png)
 
 Переход в директорию **/usr/bin** и вывод содержимого файла **apropos**:
 
 
-![](pictures/usr-bin-apropos.png)
+![](pictures/lab1-5/usr-bin-apropos.png)
 
 
 При переходе в директорию **/dev** можно увидеть специальные устройства, через которые программы могут взаимодействовать с оборудованием и виртуальными устройствами: **/dev/sda**, **/dev/tty1** и другие.
 
-![](pictures/dev.png)
+![](pictures/lab1-5/dev.png)
 
 
 Многие устройства представлены в системе как файлы, поэтому программы могут взаимодействовать с ними через стандартные операции файловой системы.
@@ -599,17 +599,17 @@ export LANG=en_US.UTF-8
 
 При переходе в директорию **/run/systemd/** можно увидеть сокет **/run/systemd/journal**. Сокет нужен для обмена данными между процессами.
 
-![](pictures/journal.png)
+![](pictures/lab1-5/journal.png)
 
 
 При переходе в директорию **/dev/** можно увидеть символическую ссылку **cdrom** -- ссылку на другой файл или каталог (в данном случае на sr0).
 
-![](pictures/cdroom.png)
+![](pictures/lab1-5/cdroom.png)
 
 Найти канал **/run/systemd/initctl/fifo** не удалось, однако есть канал **/run/systemd/inaccessible/fifo**. Каналы используются для передачи данных между процессами
 
 
-![](pictures/fifofind.png)
+![](pictures/lab1-5/fifofind.png)
 
 
 Определять назначения каждого из файлов можно при помощи команды
@@ -650,16 +650,16 @@ p--------- 1 root root 0 Sep 23 19:03 fifo
 При помощи команжы **stat** можно исследовать информацию о каждом из перечисленных выше файлах, вывести тип, размер, права, владельца, inode, даты и т. д:
 
 
-![](pictures/stat.png)
+![](pictures/lab1-5/stat.png)
 
 
 Команда **file** выводит менее подробную информацию, но так же можно узнать, какой тип представляет собой данный файл:
 
-![](pictures/file1.png)
+![](pictures/lab1-5/file1.png)
 
 Ниже команды **file** и **stat** с остальными файлами.
 
-![](pictures/another-file-stat.png)
+![](pictures/lab1-5/another-file-stat.png)
 
 
 ## Упражнение 4.3 Манипулирование объектами дерева каталога UNIX
@@ -667,7 +667,7 @@ p--------- 1 root root 0 Sep 23 19:03 fifo
 Ниже приведен пример создания подкаталога **subdir**, внутри него файла **myfirsttime**, мягкой и жесткой ссылок на него.
 
 
-![](pictures/myfirsttime.png)
+![](pictures/lab1-5/myfirsttime.png)
 
 Мягкая ссылка.
 
@@ -683,7 +683,7 @@ p--------- 1 root root 0 Sep 23 19:03 fifo
 
 FIFO используется для взаимодействия процессов через поток данных. Ниже приведена последовательность действий для создания потока данных:
 
-![](pictures/myfifo.png)
+![](pictures/lab1-5/myfifo.png)
 
 Создать канал можно также через команду **mknod**:
 
@@ -707,24 +707,24 @@ Minor - номер конкретного устройства внутри эт
 
 Ниже приведена последовательность действий, связанных с перемещением файла, удалением всех файлов, удалением директории.
 
-![](pictures/mv-rm-rmdir.png)
+![](pictures/lab1-5/mv-rm-rmdir.png)
 
 
 **Образ диска.**
 
 В виртуальной машине VirtualBox к виртуальному оптическому приводу был подключён ISO-образ Debian. После запуска основной Linux-системы наличие оптического устройства было проверено командой:
 
-![](pictures/nositeli.png)
+![](pictures/lab1-5/nositeli.png)
 
 Далее при перезагрузке системы и ввода команды **lsblk**  **sr0** содержит образ Debian ISO.
 
-![](pictures/bootwithiso.png)
+![](pictures/lab1-5/bootwithiso.png)
 
 Далее был создан образ оптического диска:
 
-![](pictures/createiso.png)
+![](pictures/lab1-5/createiso.png)
 
-![](pictures/cdrom-iso-installed.png)
+![](pictures/lab1-5/cdrom-iso-installed.png)
 
 
 ## Упражнение 4.4. Поиск файлов
@@ -739,35 +739,35 @@ find /usr -type file -size +800k
 
 выводятся все файлы размером более 800Кб:
 
-![](pictures/g800k.png)
+![](pictures/lab1-5/g800k.png)
 
 Команда **which** для поиска полного пути к исполняемому файлу.
 
 Команда **whereis** используется для поиска исполняемых файлов, исходных файлов и страниц документации. 
 
 
-![](pictures/which-whereis.png)
+![](pictures/lab1-5/which-whereis.png)
 
 
 Ниже поиск информации о местоположении программ **bash**, **passwd**, **chsh**, **chfn**, **finger**.
 
 
-![](pictures/bash-passwd.png)
+![](pictures/lab1-5/bash-passwd.png)
 
 
 ## Упражнение 4.5. Операции с файловыми системами
 
 Для подключения файловой системы оптического диска был использован каталог /mnt:
 
-![](pictures/mount.png)
+![](pictures/lab1-5/mount.png)
 
 Файловая система была смонтирована в режиме только для чтения, что связано с особенностями оптического носителя.
 
-![](pictures/memory-for-mnt.png)
+![](pictures/lab1-5/memory-for-mnt.png)
 
 Для размонтировки файловой системы выполнилнены следующие команды:
 
-![](pictures/umount.png)
+![](pictures/lab1-5/umount.png)
 
 
 Для определения объёма занятого пространства:
@@ -796,11 +796,11 @@ du определяет объём, занимаемый конкретными 
 4. /mnt
 5. / (свободное место)
 
-![alt text](pictures/df.png)
+![alt text](pictures/lab1-5/df.png)
 
 Ниже приведено использование команды **du**.
 
-![alt text](pictures/du-eli.png)
+![alt text](pictures/lab1-5/du-eli.png)
 
 При вводе команды
 
@@ -814,7 +814,7 @@ du -sh /
 ## Упражнение 5.1 Владельцы файлов
 
 
-![](pictures/prava-owners.png)
+![](pictures/lab1-5/prava-owners.png)
 
 Первая надпись **root** (**arkady-student**) указывает на владельца, вторая надпись **root** (**arkady-student**) -- на группу.
 
@@ -825,7 +825,7 @@ du -sh /
 chown [опции] <владелец> <файл>
 ```
 
-![](pictures/chownforaka.png)
+![](pictures/lab1-5/chownforaka.png)
 
 Команда **chgrp** меняет только группу.
 
@@ -835,7 +835,7 @@ chgrp [опции] <группа> <файл>
 
 Ниже использование команды **chgrp**.
 
-![alt text](pictures/gif-for-root.png)
+![alt text](pictures/lab1-5/gif-for-root.png)
 
 Реакция системы: 
 
@@ -884,40 +884,86 @@ r-- = 4
 
 Далее был создан файл **newfile** и были присвоены права для владельца, группы и остального: **644**, что равносильно **rw-r--r--**
 
-![](pictures/chmod-rwx.png)
+![](pictures/lab1-5/chmod-rwx.png)
 
 
 По умолчанию файл создается с правами **666**, а директория -- с правами **777**
 
 В зависимости от значения **umask** права изменяются после создания. Ниже это отражено:
 
-![](pictures/deleli.png)
+![](pictures/lab1-5/deleli.png)
 
 
-![](pictures/umask000.png)
+![](pictures/lab1-5/lab1-5/umask000.png)
 
-![](pictures/umask777.png)
+![](pictures/lab1-5/umask777.png)
 
 
-![](pictures/another-chmod.png)
+![](pictures/lab1-5/another-chmod.png)
 
 
 # Лабораторная работа 6. Обработка текстовой информации. Управление вводом-выводом команд. Подстановки командного интерпретатора.
 
 ## Упражнение 6.1 Обработка текстовой информации в UNIX
 
+Команда **cat** (concatenate) считывает файл и выводит его содержимое в терминал за один раз.
 
-![](pictures/cat.png)
+![](pictures/lab1-5/cat.png)
 
-![](pictures/less.png)
+Команда **less** открывает файл и постраничном режиме.
 
-![](pictures/more.png)
+![](pictures/lab1-5/less.png)
 
-![](pictures/head.png)
+Команда **more** открывает файл и постраничном режиме, но при .
+
+![](pictures/lab1-5/more.png)
+
+Команда **head** выводит по умолчанию первые 10 строк файла. С помощью флага **-n** можно указать нужное количество строк для вывода.
+
+![](pictures/lab1-5/head.png)
+
+Команда **tail** выводит по умолчанию последние 10 строк файла. Аналогично можно вывести нужное количество через флаг **-n**.
+
+![](pictures/lab1-5/protocols.png)
 
 
-![](pictures/protocols.png)
+При помощи команды **od** можно представить файл в различных системах счисления. Флаг **-b** для вывода в восьмеричном формате.
+
+```bash
+od -b /bin/bash
+```
+
+![](pictures/lab1-5/od.png)
+
+При помощи команды **hexdump** можно представить файл в читаемом формате. Флаг **-C** выводит смещение байтов, сам Hexdump и его посимвольное представление в ASCII.
+
+```bash
+hexdump -C /bin/bash
+```
+
+![alt text](pictures/lab6/hexdump.png)
 
 
-![](pictures/od.png)
+Команда **diff** сравнивает два текстовых файла строка за строкой и показывает разницу между ними.
+
+Команда **cmp** сравнивает файлы побайтово. Она подходит для бинарных файлов. При первом расхождении команда выводит номер строки и номер байта.
+
+![alt text](pictures/lab6/diff-cmp.png)
+
+Команда **grep** ищет совпадения по шаблону в тексте. Эта команда выведет все строки, где встречается последовательность введенных символов.
+
+Флаг **-E** позволяет вводить регулярные выражения.
+
+Флаг **-v** инвертирует поиск: выводит то, что не совпадает с шаблоном.
+
+Флаг **-b** задает границы слова.
+
+![alt text](pictures/lab6/grep-1.png)
+
+![alt text](pictures/lab6/grep-2.png)
+
+![alt text](pictures/lab6/grep-.png)
+
+
+
 
