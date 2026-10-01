@@ -1434,6 +1434,11 @@ Midnight Commander -- это консольный двухпанельный ф�
 ---
 
 
+```bash
+*/5 * * * * * tar -czf /home/arkady-student/autoarchive-bachup.tgz /home/arkady-student
+```
+
+Это шаблон времени, операция будет выполняться каждые 5 минут.
 
 
 
