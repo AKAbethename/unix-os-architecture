@@ -1508,7 +1508,7 @@ Midnight Commander -- это консольный двухпанельный ф�
 
 
 ```bash
-*/5 * * * * * tar -czf /home/arkady-student/autoarchive-bachup.tgz /home/arkady-student
+5 * * * * * tar -czf /home/arkady-student/autoarchive-bachup.tgz /home/arkady-student
 ```
 
 Это шаблон времени, операция будет выполняться каждые 5 минут.
@@ -1577,12 +1577,28 @@ u - user - показать список процессов всех польз�
 
 x -- показать процессы, которые не привязаны к терминалу (системные демоны)
 
-Системные процессы -- это процессы ядра и нициализации. Имеют PID 1 и 2
+Системные процессы -- это процессы ядра и нициализации. Имеют PPID 1 и 2
 
 ![alt text](pictures/lab7/ps-aux.png)
 
 
 Пользовательские процессы - процессы, запущенные текущим пользователем. Они привязаные к терминалу (в колонке TTY указано pts/0 или tty1). Например, bash, ps aux, mc, vim.
+
+
+Системные процессы не занимают физическую память.
+![alt text](pictures/lab9/daemon.png)
+
+
+Демоны занимают память:
+
+![alt text](pictures/lab9/daemon2.png)
+
+
+Пользовательские привязаны к терминалам:
+
+![alt text](pictures/lab9/term.png)
+
+
 
 ---
 
@@ -1905,6 +1921,8 @@ mail
 
 При попытке скачать файл через стандартный ftp в пассивном режиме возникла ошибка **Connection refused** из-за ограничений сетевого адаптера NAT. Для выполнения задания использовалась утилита **lftp** с выключенным пассивным режимом, которая успешно скачала файл ChangeLog из каталога /debian/dists/bookworm/ на FTP-сервере Яндекса.
 
+![alt text](pictures/lab9/ftp-mimo-2.png)
+
 
 
 ![alt text](pictures/lab9/change-log.png)
@@ -1978,6 +1996,11 @@ rsync -av -e ssh student@172.20.10.5:/home/student/bin ~/remote.bin/
 ## Упражнение 10.1 Создание собственного настольного окружения
 
 
+```bash
+sudo systemctl set-default graphical.target
+```
+
+
 При помощи команды
 
 ```bash
@@ -2043,11 +2066,13 @@ exec startxfce4
 
 ---
 
-При вводе 
+Команда 
 
 ```bash
 startx
 ```
+
+читает файл .xinitrc и запускает графическую сессию.
 
 
 ![alt text](pictures/lab10/startx-xfce.png)
