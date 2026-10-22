@@ -2269,6 +2269,11 @@ man ls | lpr -P LocalPrinter
 ls -la ~/PDF
 ```
 
+Для печати страницы **man** в полужирном шрифте нужно использовать флаг **-t**:
+
+![alt text](pictures/lab10/pdf-J.png)
+
+
 ![alt text](pictures/lab10/final.png)
 
 
