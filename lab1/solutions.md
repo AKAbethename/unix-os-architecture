@@ -2257,6 +2257,27 @@ lpstat -o LocalPrinter
 cancel -a LocalPrinter
 ```
 
+Для наглядного просмотра очереди можно остановить очеред через команду:
+
+```bash
+sudo cupsdisable LocalPrinter
+```
+
+![alt text](pictures/lab10/paused.png)
+
+После того, как остановлена работа принтера, задача наглядно видна.
+
+![alt text](pictures/lab10/inqueue.png)
+
+
+Для удаления команда:
+
+```bash
+cancel LocalPrinter
+```
+
+![alt text](image-3.png)
+
 Печать страницы руководства man:
 
 ```bash
@@ -2280,5 +2301,7 @@ ls -la ~/PDF
 Наглядная демонстрация создания файлов через графическую оболочку и просмотр pdf-файла man-страницы через Firefox:
 
 ![alt text](pictures/lab10/final-2.png)
+
+
 
 
